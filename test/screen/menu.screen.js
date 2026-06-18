@@ -1,12 +1,22 @@
 class MenuScreen {
     constructor() {
-        this.leftMenuButton = "~open menu"
-        this.loginButton = "//*[@text= 'Log In']"
+        this.leftMenuButton = '~open menu'
+        this.loginMenuItem = "//*[@text='Log In']"
+        this.catalogMenuItem = "//*[@text='Catalog']"
     }
 
-    async acessLoginScreen() {
+    async openMenu() {
         await $(this.leftMenuButton).click()
-        await $(this.loginButton).click()
+    }
+
+    async accessLoginScreen() {
+        await this.openMenu()
+        await $(this.loginMenuItem).click()
+    }
+
+    async accessCatalog() {
+        await this.openMenu()
+        await $(this.catalogMenuItem).click()
     }
 }
 

@@ -1,0 +1,19 @@
+# node_modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# APK files (binary, too large for version control)
+app/*.apk
+app/*.aab
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
